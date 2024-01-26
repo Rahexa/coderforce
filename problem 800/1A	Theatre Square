@@ -1,1 +1,23 @@
 
+import java.util.Scanner;
+
+public class TheatreSquare {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Input: n, m, and a
+        int n = sc.nextInt();
+        int m = sc.nextInt();
+        int a = sc.nextInt();
+
+        // Calculate the number of flagstones needed
+        long flagstones = (long) Math.ceil((double) n / a) * (long) Math.ceil((double) m / a);
+
+        // Output the result
+        System.out.println(flagstones);
+
+        // Close the scanner
+        sc.close();
+    }
+}
