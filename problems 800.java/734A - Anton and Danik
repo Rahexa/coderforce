@@ -1,0 +1,38 @@
+import java.util.Scanner;
+ 
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println();
+int n;
+ 
+n = sc.nextInt();
+sc.nextLine();
+String input = sc.nextLine();
+ 
+char[] C = input.toCharArray();
+int antoncount = 0;int danik = 0;
+ 
+for(char x:C) {
+if(x == 'A')
+	antoncount++;
+else if (x == 'D') {
+	danik++;
+}
+ 
+ 
+}
+if(antoncount == danik)   {
+	System.out.println("Friendship");
+}  
+if(antoncount > danik)   {
+	System.out.println("Anton");
+}
+if(antoncount < danik)   {
+	System.out.println("Danik");
+}
+ 
+ 
+        sc.close();
+    }
+}
