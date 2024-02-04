@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class AbbreviateWords {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int n = scanner.nextInt();
+        scanner.nextLine(); // Consume the newline character after reading the integer
+
+        String[] words = new String[n];
+
+        // Input words
+        for (int i = 0; i < n; i++) {
+            words[i] = scanner.nextLine();
+        }
+
+        // Process and output words
+        for (String word : words) {
+            if (word.length() > 10) {
+                String abbreviation = word.charAt(0) + Integer.toString(word.length() - 2) + word.charAt(word.length() - 1);
+                System.out.println(abbreviation);
+            } else {
+                System.out.println(word);
+            }
+        }
+
+        scanner.close();
+    }
+}
