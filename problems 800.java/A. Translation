@@ -1,0 +1,32 @@
+import java.util.Scanner;
+public class main {
+	public static void main(String[] args) {
+		
+				
+			Scanner sc = new Scanner(System.in);
+			
+			System.out.println();
+			String input1 = sc.nextLine();
+			String input2 = sc.nextLine();
+			
+			
+			StringBuilder s = new StringBuilder(input1).reverse();
+		String n = s.toString();
+			
+			
+		if(input2.equals(n))	{
+			System.out.println("YES");
+		}
+
+		else {
+			System.out.println("NO");
+		}
+		sc.close();
+
+		    }
+		    
+		}
+
+
+
+		
