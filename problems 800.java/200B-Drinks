@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Read the number of drinks
+        int n = scanner.nextInt();
+
+        // Read the volume fractions of orange juice in each drink and calculate their sum
+        float sum = 0;
+        for (int i = 0; i < n; i++) {
+            float x = scanner.nextFloat();
+            sum += x;
+        }
+
+        // Calculate the average volume fraction
+        float average = sum / n;
+
+        // Print the result
+        System.out.println(average);
+
+        scanner.close();
+    }
+}
