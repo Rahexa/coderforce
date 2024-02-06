@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Input the number of test cases
+        System.out.println();
+        int t = scanner.nextInt();
+        
+        // Iterate over each test case
+        for (int i = 0; i < t; i++) {
+            // Input the number of candies
+            long n = scanner.nextLong();
+            
+            // Calculate the number of ways to distribute candies
+            long ways = (n - 1) / 2;
+            
+            // Print the result for the current test case
+            System.out.println(ways);
+        }
+
+        scanner.close();
+    }
+}
