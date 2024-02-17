@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Main {
+    
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        long n = sc.nextLong();
+        int count = 0;
+        
+        // Extract digits from the number until it becomes zero
+        while (n != 0) {
+            long digit = n % 10; // Extract the last digit
+            if (digit == 4 || digit == 7) {
+                count++; // Increment the count if it's a lucky digit
+            }
+            n /= 10; // Remove the last digit
+        }
+        
+        // Check if the count is a lucky number
+        if (count == 7 || count == 4) {
+            System.out.println("YES");
+        } else {
+            System.out.println("NO");
+        }
+    }
+}
