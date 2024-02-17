@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Main {
+    
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int l = sc.nextInt(); // Limak's weight
+        int b = sc.nextInt(); // Bob's weight
+        
+        int count = 0; // Initialize count to 0
+        
+        // Loop until Limak's weight becomes strictly larger than Bob's weight
+        while (l <= b) {
+            l *= 3; // Limak's weight triples every year
+            b *= 2; // Bob's weight doubles every year
+            count++; // Increment the number of years
+        }
+        
+        System.out.println(count); // Print the number of years required
+    }
+}
