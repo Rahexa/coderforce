@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class test {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int  n = sc.nextInt();
+       
+int[]       event = new int[n];
+
+for(int i = 0;i<n;i++) {
+	
+	event[i] = sc.nextInt();
+	
+}
+int crime = 0;
+int officer = 0;
+for(int Event:event) {
+	
+	if(Event ==-1) {
+		
+		if(officer == 0) {
+			
+			crime++;
+			
+		}
+		
+		else {officer--;}
+	}
+	
+	else {
+		
+		officer = officer+Event;
+	}
+	
+}
+       
+
+        System.out.println(crime);
+        
+        
+        
+        
+    }
+}
