@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class Main {
+    
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt(); // number of test cases
+        sc.nextLine(); // consume newline
+        
+        for (int i = 0; i < t; i++) {
+            String ticket = sc.nextLine(); 
+            
+            int sumFirstThree = 0;
+            for (int j = 0; j < 3; j++) {
+                sumFirstThree = sumFirstThree+ticket.charAt(j) - '0';
+            }
+            
+            // Calculate the sum of the last three digits
+            int sumLastThree = 0;
+            for (int j = 3; j < 6; j++) {
+                sumLastThree = sumLastThree+ticket.charAt(j) - '0';
+            }
+            
+            // Check if the sums are equal
+            if (sumFirstThree == sumLastThree) {
+                System.out.println("YES");
+            } else {
+                System.out.println("NO");
+            }
+        }
+        
+        sc.close();
+    }
+}
