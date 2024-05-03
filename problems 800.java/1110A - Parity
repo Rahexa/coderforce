@@ -1,0 +1,29 @@
+def mpow(x, y):
+    ans = 1
+    while y > 0:
+        if y % 2 == 0:
+            ans = (ans * ans) % 2
+            y //= 2
+        else:
+            ans = (ans * x) % 2
+            y -= 1
+    return ans
+
+def main():
+    b, k = map(int, input().split())
+    a = list(map(int, input().split()))
+
+    result = 0
+    exp = k - 1
+    
+    for i in range(k):
+        result = (result + a[i] * mpow(b, exp)) % 2
+        exp -= 1
+
+    if result == 0:
+        print("even")
+    else:
+        print("odd")
+
+if __name__ == "__main__":
+    main()
