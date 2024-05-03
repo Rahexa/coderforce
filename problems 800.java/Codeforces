@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Main {
+    
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        sc.nextLine(); // Consume newline
+        
+        String word = "codeforces"; 
+        
+        // Process each test case
+        for (int t = 0; t < n; t++) {
+            char c = sc.nextLine().charAt(0); // Read the character input
+            
+            // Check if the character exists in "codeforces"
+            if (word.indexOf(c) != -1) {
+                System.out.println("YES");
+            } else {
+                System.out.println("NO");
+            }
+        }
+        
+        sc.close();
+    }
+}
