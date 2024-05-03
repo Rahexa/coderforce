@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class maint {
+	
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		sc.nextLine();
+		int count = 0;
+		for(int x = 0;x<n;x++) {
+			
+			String s = sc.nextLine();
+			if(s.charAt(0)=='+' || s.charAt(2) == '+') {
+				
+count++;			}
+			else {
+				count--;
+			}
+	
+			
+		}
+		
+		
+		
+		System.out.println(count);
+
+		
+		
+	}
+}
