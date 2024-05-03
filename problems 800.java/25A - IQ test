@@ -1,0 +1,53 @@
+import java.util.Scanner;
+
+public class  Main{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+       int n = sc.nextInt();
+       int[] number = new int[n];
+        
+       for(int i =0;i<n;i++) {
+    	   
+    	  number[i] = sc.nextInt();
+    	   
+       }
+        int odd =0;
+        int even = 0;
+        int indexodd = 0;
+        int indexeven=0;
+        
+        for(int i =0;i<n;i++) {
+        	if(number[i]%2 == 0) {
+        		
+        		even++;
+        		
+        		indexeven = i+1;
+        		
+        		
+        	}
+        	
+        	else {
+        		
+        		odd++;
+        		
+        		indexodd= i+1;
+        		
+        		
+        		
+        	}
+       
+               
+        }
+        
+        if(odd == 1) {System.out.println(indexodd);
+    	
+        }
+        	
+        else {System.out.println(indexeven);
+        	
+        	
+        	
+        }
+        
+        }
+    }
