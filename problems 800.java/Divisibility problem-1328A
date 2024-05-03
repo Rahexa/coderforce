@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Main {
+    
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt(); // number of test cases
+        
+        for (int i = 0; i < t; i++) {
+            int a = sc.nextInt(); // read a
+            int b = sc.nextInt(); // read b
+            
+            int remainder = a % b; // calculate the remainder
+            
+            int moves;
+            if (remainder == 0) {
+                moves = 0;
+            } else {
+                moves = b - remainder;
+            }
+            
+            System.out.println(moves); // print the number of moves
+        }
+        
+        sc.close();
+    }
+}
