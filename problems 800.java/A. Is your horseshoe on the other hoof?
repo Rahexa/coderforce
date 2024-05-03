@@ -1,0 +1,29 @@
+import java.util.HashSet;
+import java.util.Scanner;
+import java.util.Set;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        int[] horseshoes = new int[4];
+        for (int i = 0; i < 4; i++) {
+            horseshoes[i] = scanner.nextInt();
+        }
+        
+        int distinctColors = countDistinctColors(horseshoes);
+        int minimumHorseshoesNeeded = 4 - distinctColors;
+        
+        System.out.println(minimumHorseshoesNeeded);
+        
+        scanner.close();
+    }
+    
+    public static int countDistinctColors(int[] horseshoes) {
+        Set<Integer> colorSet = new HashSet<>();
+        for (int color : horseshoes) {
+            colorSet.add(color);
+        }
+        return colorSet.size();
+    }
+}
